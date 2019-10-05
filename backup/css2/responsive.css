@@ -1,0 +1,501 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+/* SVG BG effect */
+body {
+    margin: 0;
+    padding: 0;
+}
+section.sec1 {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    /* background: #ff319c url("../images/bakery-wallpaper_1280.jpg"); */
+    background-image: url("../images/bakery-wallpaper_1280.jpg");
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+
+section.sec1.home {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    /* background: #ff319c url("../images/bakery-wallpaper_1280.jpg"); */
+    background-image: url("../images/istockphoto-164444132-1024x1024.jpg");
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+
+section.sec1.about {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    /* background: #ff319c url("../images/bakery-wallpaper_1280.jpg"); */
+    background-image: url("../images/about-join-us.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+
+#curve {
+    position: absolute;
+    bottom: 0;
+    
+    width: 100%;
+    /* height: 100%; */
+}
+
+#curve path {
+    fill: rgb(255, 244, 229);
+    /* fill: #ff0; */
+}
+
+/* section.sec2{
+    width: 100%;
+    height: 100h;
+    background: #ff0;
+} */
+/*--------------------------------------------------------------
+ Reset
+--------------------------------------------------------------*/
+
+*,
+ ::after,
+ ::before {
+    box-sizing: border-box
+}
+
+
+/* Responsive Images Reset */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/*--------------------------------------------------------------
+ Typography
+--------------------------------------------------------------*/
+
+body {
+    font-family: 'Karla', sans-serif;
+    /* background-color: #ebebeb; */
+    background-color: rgb(255, 244, 229);
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+nav a {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: .5rem
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+
+/*--------------------------------------------------------------
+ Container Styles
+--------------------------------------------------------------*/
+
+.container {
+    /* background-color: white; */
+    /* background-color: #F5EFDF; */
+    background-color: rgb(255, 244, 229);
+    position: relative;
+    width: 100%;
+    max-width: 1264px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+
+/*--------------------------------------------------------------
+ header styles
+--------------------------------------------------------------*/
+
+header .container {
+    background-color: transparent;
+}
+
+header.solid {
+    background-color: black !important;
+}
+
+header.solid .container {
+    background-color: black !important;
+}
+
+header.solid a {
+    color: white;
+    text-decoration: none;
+}
+
+header.solid a:hover,
+header.solid a:active,
+header.solid a:focus {
+    color: white !important;
+}
+
+
+header {
+    /* background-color: #FF4C2E; */
+    height: 90px;
+}
+
+header .container {
+    /* background-color: #FF4C2E; */
+    padding: 0 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+header a {
+    /* color: white; */
+    /* color: black; */
+    color: #eee;
+    text-decoration: none;
+
+}
+
+header a:hover,
+header a:active,
+header a:focus {
+    /* color: white; */
+    color: black !important;
+}
+
+header h1 {
+    margin-bottom: 0;
+}
+
+header h1 a {
+    margin: 0;
+    line-height: 90px;
+    font-size: 3rem;
+    float: left;
+}
+
+
+/*--------------------------------------------------------------
+ header navigation styles
+--------------------------------------------------------------*/
+
+.btn-menu {
+    display: none;
+}
+
+header {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.navbar {
+    height: 80px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    z-index: 100;
+    transition: background-color 1s ease 0s;
+}
+
+header .navbar {
+    width: 600px;
+}
+
+header .navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header .navbar li {
+    flex: 1;
+}
+
+header .navbar a {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 90px;
+}
+
+header .navbar a:hover,
+header .navbar a:active,
+header .navbar a:focus {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.3);
+    text-decoration: none;
+}
+
+
+/* Solid class attached on scroll past first section */
+
+.navbar.solid {
+    background-color: #490D40;
+    transition: background-color 1s ease 0s;
+    box-shadow: 0 0 4px grey;
+}
+
+
+/*--------------------------------------------------------------
+ banner styles 
+--------------------------------------------------------------*/
+
+
+/* top banner styles */
+
+/* .top-banner {
+    padding: 100px 0;
+    background-image: url("../images/bakery-wallpaper_1280.jpg");
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    min-height: 500px;
+} */
+.top-banner-single {
+    padding: 100px 0;
+    background-image: url("../images/wood-background_1280.jpg");
+    background-size: cover;
+    background-position: bottom;
+    height: 800px;
+}
+.top-banner-single h1, .top-banner-single h2, .top-banner-single h3, .top-banner-single p {
+    color: white;
+}
+.top-banner h2 {
+    font-size: 4rem;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.top-banner p {
+    text-align: center;
+    font-size: 2rem;
+    margin: 0;
+    line-height: 1.2;
+}
+
+
+/* mid banner styles */
+
+.mid-banner {
+    position: relative;
+}
+
+.mid-banner h2 {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+}
+
+
+/* bottom banner styles */
+
+.bottom-banner {
+    background-color: #F2F2F2;
+    padding: 90px 0;
+}
+
+.bottom-banner p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.bottom-banner a {
+    color: white;
+    display: block;
+    background-color: #FF4C2E;
+    padding: 14px 40px;
+    width: 200px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    margin: 0 auto;
+}
+
+
+/*--------------------------------------------------------------
+ Grid Styles
+--------------------------------------------------------------*/
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+/* Grid Column Widths */
+
+.one-half {
+    width: 48%;
+}
+
+.one-third {
+    width: 30.6666666667%;
+}
+
+
+/*--------------------------------------------------------------
+ process styles
+--------------------------------------------------------------*/
+
+.process {
+    padding: 30px;
+}
+
+.process>h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.process article h1 {
+    text-align: center;
+}
+
+
+/*--------------------------------------------------------------
+ footer
+--------------------------------------------------------------*/
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 30px;
+}
+
+footer a {
+    color: white;
+}
+
+footer a:hover,
+footer a:active,
+footer a:focus {
+    color: white;
+}
+
+
+/* Media Queries */
+
+@media screen and (max-width: 900px) {
+    /* responsive navigation */
+    .btn-menu {
+        display: block;
+        background-color: transparent;
+        border: none;
+        font-size: 1.3rem;
+        color: white;
+        text-transform: uppercase;
+        line-height: 90px;
+    }
+    .btn-menu:focus {
+        outline: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    header .navbar {
+        display: none;
+        width: 100%;
+        clear: both;
+        background-color: #FF4C2E;
+    }
+    header .navbar ul {
+        display: block;
+    }
+    header .navbarnav li {
+        width: 100%;
+    }
+    header .navbar a {
+        display: block;
+        line-height: 40px;
+        text-align: center;
+    }
+    .show header {
+        height: auto;
+    }
+    .show header .navbar {
+        display: block;
+    }
+    /* top banner */
+    .top-banner {
+        padding: 10vw 0;
+    }
+    .top-banner h2 {
+        font-size: 7vw;
+    }
+    .top-banner p {
+        font-size: 3.5vw;
+    }
+    .mid-banner h2 {
+        font-size: 7vw;
+    }
+    .bottom-banner {
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    header {
+        height: 70px;
+    }
+    header h1 a {
+        line-height: 70px;
+        font-size: 2.5rem;
+    }
+    .btn-menu {
+        line-height: 70px;
+        font-size: 1.2rem;
+    }
+    /* Make Grid Columns 
+	   Single Columns on Mobile */
+    .one-half,
+    .one-third {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    section {
+        padding: 20px;
+    }
+    header .container {
+        padding: 0 20px;
+    }
+    footer {
+        padding: 20px;
+    }
+}

@@ -1,0 +1,87 @@
+
+a {
+    color: #c2575b;
+    text-decoration: none;
+    transition: 0.15s color ease;
+}
+
+a:hover {
+    color: #f76f76;
+}
+/*	==========================================
+	 Sidenav 
+	========================================== */
+.sidenav {
+    position: relative;
+    padding: 20px;
+    overflow: auto;
+    background: #333;
+    color: #eee;
+    display: none;
+    width: 100%;
+}
+
+    .sidenav ul {
+        margin-top: 10px;
+    }
+
+        .sidenav li {
+            display: inline-block;
+            width: 200px;
+            list-style: none;
+            font-size: 20px;
+        }
+
+            .sidenav li:before {
+                content: '-';
+                margin-right: 5px;
+                color: rgba(255,255,255,0.2);
+            }
+.sidenav .logo {
+
+}
+.sidenav .content {
+ display: flex;
+ width: 100%;
+}
+.sidenav .content ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 50%;
+}
+.sidenav .content ul li {
+    // display: flex;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 30%;
+    // padding: 3px 10px;
+    width: 100%;
+}
+.sidenav .content li::before {
+    content: '';
+}
+
+.sidenav-grid {
+
+}
+
+.sidenav-arrow {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 14px;
+    top: 50%;
+    margin-top: -16px;
+    border-left: 16px solid #333;
+    z-index: 10;
+    border: 10px solid transparent;
+
+    transition: opacity 0.4s ease 0.4s;
+}
+
+.sidenav-active .sidenav-arrow {
+    transition: opacity 0.2s ease;
+}

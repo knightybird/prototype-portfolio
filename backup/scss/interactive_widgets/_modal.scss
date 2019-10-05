@@ -1,0 +1,170 @@
+.modal-active body {
+	transform: scale( 0.9 );
+}
+
+.modal-cover {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	visibility: hidden;
+	opacity: 0;
+	background: rgba( 0, 0, 0, 0.5 );
+}
+	.modal-active .modal-cover {
+		visibility: visible;
+		opacity: 1;
+	}
+
+.modal-contents {
+	position: relative;
+	padding: 20px;
+	max-width: 400px;
+	margin: auto;
+}
+	.modal-active .modal-contents {
+		-webkit-filter: blur(2px);
+		   -moz-filter: blur(2px);
+		    -ms-filter: blur(2px);
+		        filter: blur(2px);
+	}
+	.no-blur.modal-active .modal-contents {
+		-webkit-filter: none;
+		   -moz-filter: none;
+		    -ms-filter: none;
+		        filter: none;
+	}
+
+.modal-popup {
+	position: absolute;
+	width: 440px;
+	// left: 50%;
+	// top: 50%;
+	// margin: -140px 0 0 -220px;
+	visibility: hidden;
+	opacity: 0;
+	z-index: 2;
+	padding: 30px;
+
+	background: white;
+	box-shadow: 0px 0px 60px rgba( 0, 0, 0, 0.3 );
+	border-radius: 3px;
+	box-sizing: border-box;
+
+	transform: scale( 0.8 );
+}
+	.modal-active .modal-popup-animate {
+		visibility: visible;
+		opacity: 1;
+
+		transform: scale( 1.1111 );
+	}
+	.modal-popup.stack {
+		transform: scale( 1.5 );
+	}
+	.modal-active .modal-popup.stack {
+		transform: scale( 1.1111 );
+	}
+
+
+.modal-ready body,
+.modal-ready .modal-contents,
+.modal-ready .modal-popup,
+.modal-ready .modal-cover {
+	transform-origin: 50% 50%;
+	transition: 0.3s all cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+.modal-ready .modal-popup.no-transition {
+	transition: none;
+}
+
+
+/* modal cards */
+// body {
+//     margin: 0;
+//     padding: 0;
+//     background: #262626;
+//     font-family: arial;
+// }
+ul.card{
+    margin: 0;
+    padding: 0;
+    // position: absolute;
+    left: 40%;
+    top: 20%;
+	/* display: flex; */
+}
+ul.card li {
+    display: block;
+    width: 240px;
+    height: 280px;
+    background: #fff;
+    position: absolute;
+    box-shadow: 10px 10px 20px rgba(0,0,0,.5);
+    top: 0;
+    left: 0;
+    transform-origin: bottom center;
+    transform: rotate(10deg) skew(-30deg);
+    transition: .5s;
+}
+
+ul.card li span {
+    display: block;
+    color: #ccc;
+    text-align: center;
+    font-size: 2rem;
+    line-height: 280px;
+}
+
+ul.card li.card1{
+    transform: rotate(10deg) skew(-30deg) translate(15px, 15px);
+}
+
+ul.card li.card2{
+    transform: rotate(10deg) skew(-30deg) translate(0, 0);
+}
+ul.card li.card3{
+    transform: rotate(10deg) skew(-30deg) translate(-15px, -15px);
+}
+
+ul.card:hover li.card1{
+    transform: rotate(5deg) skew(0deg) translate(200px, 0);
+}
+ul.card:hover li.card2{
+    transform: rotate(0deg) skew(0deg) translate(0, 0);
+}
+ul.card:hover li.card3{
+    transform: rotate(-5deg) skew(0deg) translate(-200px, 0);
+}
+
+ul.card li::before{
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 10px;
+    left: 0;
+    bottom: 0;
+    background: #fc2427;
+    transition: .5s;
+}
+
+
+ul.card li:after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 10px;
+    right: 0;
+    bottom: 0;
+    background: #262626;
+    transition: .5s;
+}
+
+ul.card li:hover:before{
+    left: 50%;
+}
+ul.card li:hover:after {
+    right: 50%;
+}

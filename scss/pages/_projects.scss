@@ -1,0 +1,98 @@
+/* page for projects and single-work-page */
+/*--------------------------------------------------------------
+ Projects - Projects page
+--------------------------------------------------------------*/
+.projects-page{
+    .project-tag-btn{
+        margin: 10px 5px;
+        padding: 8px 15px;
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+        transition: 0.6s all ease;
+        
+        &:hover{
+            // background-color: $color__main-color;
+            color: white;
+        }
+        &:focus{
+            outline: 0;
+        }
+    }
+
+    .project-tag-btn-active{
+        // background-color: $color__main-color;
+        color: white;
+    }
+
+    .archive-project-item{
+
+        margin: 3% 0;
+        border: 1px solid #d3d3d3;
+        transition: .6s ease all;
+        .project-name{
+            margin: 3px 0;
+            padding: 3px 0 6px;
+            color: #404040;
+            transition: .6s ease all;
+        }
+        .screenshot-container{
+            background-color: white;
+            overflow: hidden;
+            img{
+                display: block;
+                transition: .6s ease all;
+            }
+        }
+
+        &:hover{
+            // background-color: $color__main-color;
+            box-shadow: 3px 3px 6px gray;
+            border: 1px solid transparent;
+            .project-name{
+                color: white;
+            }
+            .screenshot-container{
+                background-color: white;
+                img{
+                    // -webkit-filter: brightness(0.7);
+                    // filter: brightness(0.7);
+                    opacity: 0.6;
+                    transform: scale(1.05);
+                }
+            }
+          
+        }
+    }
+}
+/*--------------------------------------------------------------
+ Projects - Single work page
+--------------------------------------------------------------*/
+.single-work-page{
+
+    .project_description{
+        padding: 0 15px;
+    }
+
+    .dev-tools-container{
+        margin: 2% 0 3%;
+        .dev-tools-title{
+            margin: 0;
+            text-transform: uppercase;
+        }
+        .dev-icon{
+            width: 40px;
+            height: 40px;
+            margin: 2px;
+        }
+    }
+   
+
+    .project-live-btn{
+        // border: 2px solid $color__main-color;
+        &:hover{
+            // background-color: $color__main-color;
+            color: white;
+        }
+    }
+}

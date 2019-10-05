@@ -1,0 +1,181 @@
+/*--------------------------------------------------------------
+Reset
+--------------------------------------------------------------*/
+
+figure {
+    margin: 0;
+}
+
+/*--------------------------------------------------------------
+Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+/*--------------------------------------------------------------
+Typography
+--------------------------------------------------------------*/
+body {
+	// color: #404040;
+	// font: 18px 'Helvetica', 'Segoe UI', Arial, sans-serif;
+}
+
+/*--------------------------------------------------------------
+Header styles
+--------------------------------------------------------------*/
+
+.masthead {
+    padding-bottom: 1em;
+    background: #eee;
+	text-align: center;
+}
+
+.site-title {
+    margin: 0;
+    padding: 1em 0 0;
+    font-size: 2em;
+    font-weight: 300;
+    color: black;
+}
+
+/*--------------------------------------------------------------
+Layout
+--------------------------------------------------------------*/
+.main-area {
+	padding: 1em;
+    background-color: #eee;
+}
+
+@media screen and (min-width: 50em) {
+    .main-area {
+        display: flex;
+    }
+
+    .filters {
+        box-sizing: border-box;
+        margin-top: 1em;
+        padding-right: 1em;
+        width: 20%;
+    }
+
+    .courses {
+        width: 80%;
+    }
+}
+
+/*--------------------------------------------------------------
+Filter buttons
+--------------------------------------------------------------*/
+.filters {
+
+}
+
+.filters ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.filters li {
+    margin: 0 2px 2px 0;
+}
+
+.filters a {
+    display: block;
+    padding: .5em 1em;
+    font-size: 80%;
+    border: solid 1px hsl(0, 0%, 50%);
+    color: #333;
+    text-decoration: none;
+    background: white;
+}
+
+.filters a:hover {
+    outline: 2px solid orange;
+}
+
+a.checked {
+    background: hsl(0, 0%, 50%);
+    color: white;
+}
+
+
+/*--------------------------------------------------------------
+Courses
+--------------------------------------------------------------*/
+
+.courses {
+    margin: 0 auto;
+}
+
+.course {
+    box-sizing: border-box;
+    padding: 1em;
+}
+
+@media screen and (min-width: 60em) {
+    .course {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 80em) {
+    .course {
+        width: 33.33333%;
+    }
+}
+
+@media screen and (min-width: 100em) {
+    .course {
+        width: 25%;
+    }
+}
+
+.course a {
+    display: block;
+    color: black;
+    text-decoration: none;
+}
+
+.course a:hover h2,
+.course a:focus h2 {
+    text-decoration: underline;
+}
+
+.course img {
+    display: block;
+    width: 100%;
+}
+
+.course figure {
+    background: white;
+}
+
+.info {
+    padding: 0 2em 1em;
+}
+
+.author {
+    margin-top: -.5em;
+    margin-bottom: 1.5em;
+    padding-top: 1em;
+    font-weight: 700;
+    font-size: .8em;
+    border-top: 1px solid #ededed;
+}
+
+.by {
+    font-weight: 100;
+}
+
+.description {
+    line-height: 1.3em;
+}

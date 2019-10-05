@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PortFolio v4</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+</head>
+<header>
+    <nav id="navbar">
+        <div class="toggle">
+            <div class="menu_svg">
+                <img src="images/bars-solid.svg" alt="">
+            </div>
+        </div>
+        <a href="#" class="brand"><img class="img-logo" src="logo.JPG" alt=""></a>
+
+        <ul>
+            <li><a href="index.html" class="active">HOME</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="projects.html">WORK</a></li>
+        </ul>
+    </nav>
+
+</header>
+<body>
+        <div class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="sidebar">
+        
+                <a href="#"><img class="img-logo" src="logo.jpg" alt=""></a>
+                <ul class="menu">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="projects.html">WORK</a></li>
+                </ul>
+                <div class="social-icon">
+                   
+                <ul class="social-icons"> 
+                    <div class="rightTriangle"></div>
+                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+             
+                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+        
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                </ul>
+                </div>
+                
+        
+            </div>
+            
+        <div class="title"><h1>Contact Me</h1></div>
+        <div class="container">
+            <div class="left-contact">
+                <div class="contact_wrapper">
+<div class="contact_content">
+    <h2>FORM | CONTACT ME</h2>
+    <h3>HTML Form with PHP Processing Script</h3>
+    <!-- <p>If you'd like to try filling in this form with valid credentials, you will need to use <strong>firstname</strong> and <strong>comments</strong> </p> -->
+    <p>Like what you see ? Give me a shoutout </p>
+</div>
+<div class="form-container">
+    <form action="form_processor.php" method="POST">
+    <!-- <div> -->
+    <fieldset>
+        <legend>Your Name</legend>
+        <label for="firstname">Firstname:</label>
+        <input type="text"                                name="firstname"
+               id="firstname"
+               placeholder="firstname:">
+               <br/>
+        <label for="lastname">Lastname:</label>
+        <input type="text"
+               name="lastname"
+               id="lastname"
+               placeholder="lastname:">
+               (optional)
+               <br/>
+        <label for="email">Email:</label>
+        <input  type="email"
+                name="email"
+                id="email"
+                placeholder="email:">
+                <br/>
+            <fieldset>
+        <legend>User Profile</legend>
+        <input  type="radio" 
+                name="profile"
+                value="guest"
+                id="guest"
+                checked="checked"/>
+        <label for="guest">Guest</label>
+        <br />
+        <input  type="radio" 
+                name="profile" 
+                value="student" 
+                id="student">
+        <label for="student">Student</label>
+        <br/>
+        <input  type="radio" 
+                name="profile"
+                value="employer"
+                id="employer">
+        <label for="employer">Employer</label>
+
+        <br/>
+        </fieldset>
+    <fieldset>
+        <legend>Your Message</legend>
+        <label for="comment">Message:</label>
+        <br/>
+        <textarea name="comment"
+                  id="comment" 
+                  cols="30"
+                  rows="4"
+                  placeholder="message"></textarea>
+        <br/>
+    </fieldset>
+    <input  type="submit" 
+        value="Submit email"
+        style="float:right;">
+</fieldset>
+</form>
+
+</div><!--end temp form container-->
+</div><!--end contact wrapper-->
+            </div>
+            <div class="right">
+                <div class="formBox">
+                    <form>
+                        <p>Name</p>
+                        <input type="text" name="" placeholder="Online">
+                        <p>Comment</p>
+                        <input type="text-area" name="" placeholder="Leave a comment">
+                        <!-- <input type="Password" name="" placeholder="password"> -->
+                        <input type="submit" name="" value="Send">
+                        <a href="#">Forget Password</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+       
+            
+    <script src="js/script.js"></script>
+    <script src="snake.js"></script>    
+    <script type="text/javascript">
+        $(".snake").snakeify({
+            speed: 200
+        });
+    </script>
+    </body>
+    </html>

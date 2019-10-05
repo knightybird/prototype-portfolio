@@ -1,0 +1,154 @@
+.card h1 {font-size: 18px;}
+.cards-container {
+    max-width: 1020px;
+    margin: 0 auto;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 30px;
+}
+
+.card {
+    position: relative;
+}
+
+.card:before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 0;
+    padding-bottom: calc(100% / (3 / 2) );
+}
+
+.card-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    background-color: rgba(255,255,255, 0.4);
+}
+
+/* filter styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.container li {
+    margin: 10px;
+}
+.container li label {
+    cursor: pointer;
+}
+.container li label input[type="checkbox"] {
+    display: none;
+}
+.container li label span {
+    position: relative;
+    display: inline-block;
+    background: #424242;
+    padding: 15px 30px;
+    color: #555;
+    text-shadow: 0 1px 4px rgba(0,0,0, .5);
+    border-radius: 30px;
+    font-size: 20px;
+    transition: 0.5s;
+
+    user-select: none;
+    -webkit-user-select: none;
+    overflow: hidden;
+}
+
+.container li label span:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: rgba(255,255,255,.1);
+}
+.container li:nth-child(6n + 1) label input[type="checkbox"]:checked ~ span{
+    background: #e91e63;
+    color: #fff;
+    box-shadow: 0 2px 20px #e91e63;
+}
+.container li:nth-child(6n + 2) label input[type="checkbox"]:checked ~ span{
+    background: #0f0;
+    color: #fff;
+    box-shadow: 0 2px 20px #0f0;
+}
+.container li:nth-child(6n + 3) label input[type="checkbox"]:checked ~ span{
+    background: #df01d7;
+    color: #fff;
+    box-shadow: 0 2px 20px #df01d7;
+}
+.container li:nth-child(6n + 4) label input[type="checkbox"]:checked ~ span{
+    background: #2e2efe;
+    color: #fff;
+    box-shadow: 0 2px 20px #2e2efe;
+}
+.container li:nth-child(6n + 5) label input[type="checkbox"]:checked ~ span{
+    background: #ffeb3b;
+    color: #fff;
+    box-shadow: 0 2px 20px #ffeb3b;
+}
+.container li:nth-child(6n + 6) label input[type="checkbox"]:checked ~ span{
+    background: #9c27b0;
+    color: #fff;
+    box-shadow: 0 2px 20px #9c27b0;
+}
+
+/* Filter buttons */
+
+.filters {
+    /* position: sticky;
+    top:100px; */
+    width: 100%;
+    grid-area: filters;
+}
+
+.filters ul {
+    /* position: sticky;
+    top:200px; */
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.filters li {
+    margin: 0 2px 2px 0;
+}
+
+.filters a {
+    display: block;
+    padding: .5em 1em;
+    font-size: 80%;
+    border: solid 1px hsl(0, 0%, 50%);
+    color: #333;
+    text-decoration: none;
+    background: white;
+}
+
+.filters a:hover {
+    outline: 2px solid orange;
+}
+
+a.checked {
+    background: hsl(0, 0%, 50%);
+    color: white;
+}
