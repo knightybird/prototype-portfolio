@@ -20,7 +20,7 @@
     box-shadow: inset 0 0 8px rgba(0,0,0,.3);
         /* transform: scale(0.5); */
 }
-.screen {
+.mobile-screen {
     position: relative;
     background: #262626;
     width: calc(256px / 2);
@@ -29,7 +29,7 @@
     overflow: hidden;
 }
 /* screen img */
-.screen.active {
+.mobile-screen.active {
     background: url("../logo.JPG");
     background-size: contain;
     /* background-size: cover; */
