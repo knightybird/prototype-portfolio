@@ -1,55 +1,7 @@
 
-/*
-=============================
- click effects
-=============================
- */
-/* darklight box */
-$(document).ready(function(){
-    $('ul.darklight').click(function(){
-      $('ul.darklight').toggleClass('dl-active');
-      $('body').toggleClass('dl-dark');
-    })
-  })
-  
-  /* darklight switch */
-  $(document).ready(function(){
-    $('input.darklight-switch').click(function(){
-      $('body').toggleClass('dl-dark');
-    })
-  })
-  
   /*
   =============================
-   scroll indicator
-  ============================= */
-  const landing = document.getElementById("landing");
-  
-  const landingOffset = landing.offsetTop;
-  // landing.onscroll = function() {
-    window.onscroll = function() {
-    myFunction()
-  };
-  
-  // When the user scrolls the page, execute myFunction 
-  function myFunction() {
-    if (window.pageYOffset >= landingOffset){
-        
-      const scrollBody = document.body.scrollTop || document.documentElement.scrollTop;
-  
-        var winScroll = scrollBody - landingOffset;
-  
-        const scrollH = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  
-    var height =scrollH - landingOffset;
-    var scrolled = (winScroll / height) * 100;
-    document.getElementById("myBar").style.height = scrolled + "%";
-    }
-  
-  }
-  /*
-  =============================
-   progress nav
+   progress nav - needs remake
   =============================
    */
   window.onload = function() {

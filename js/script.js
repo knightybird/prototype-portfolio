@@ -1,24 +1,38 @@
 $(document).ready(function(){
     $(".menu-icon").click(function(){
         $(".menu-icon").toggleClass("active")
-    })
+        $(".dropdown").toggleClass("active");
+    });
 
-    $(".menu-icon").click(function(){
+    $(".menu-logo").click(function(){
         $(".sidebar").toggleClass("active")
-    })
-})
+    });
 
-$(document).ready(function(){
     $('.home').click(function(){
-        $('.screen').toggleClass('active');
-    })
-})
+      $('.screen').toggleClass('active');
+    });
 
-$(document).ready(function(){
     $('.menu_svg').click(function(){
         $('ul').toggleClass('active');
-    })
-})
+    });
+  /* ======================
+      scroll to top - note: remake this
+    ======================
+  */
+    $(window).scroll(function(){
+      if($(this).scrollTop() > 200){
+        $('.scrollToTop').fadeIn();
+        $('.scrollToTop').addClass('visible');
+      } else {
+        $('.scrollToTop').fadeOut();
+        $('.scrollToTop').removeClass('visible');
+      }
+    });
+        $('.scrollToTop').click(function(){
+          $('html, body').animate({scrollTop: 0}, 1000)
+        })
+});
+
 /* ======================
     hide show nav
    ======================
@@ -33,7 +47,7 @@ window.addEventListener("scroll", function(){
     var scrollTop = window.pageYOffset || this.document.documentElement.scrollTop;
     if (window.pageYOffset >= 500 + sticky1) {
         if (scrollTop > lastScrollTop){
-          navbar.style.top = "-80px";
+          // navbar.style.top = "-80px";
           // filter.style.top = "20px";
       } else {
           navbar.style.top = "0";
@@ -70,95 +84,73 @@ function stickyNav() {
 
 }
 
-/* ======================
-    scroll to top
-   ======================
-*/
+/*
+=============================
+ Circle Landing effects
+=============================
+ */
+$(document).on('mouseover', '.landing-container .column', function(){
+  //   $(this).addClass('active_landing').siblings().removeClass('active_landing');
+  })
+  
+  $(document).on('mouseover', '.circle_container .circle', function(){
+    $(this).addClass('active_projects').siblings().removeClass('active_projects');
+  //   $("body").css("background-color", "white");
+  })
+  $(document).on('mouseleave', '.circle_container .circle', function(){
+      $(this).addClass('deactive_projects').siblings().removeClass('deactive_projects');
+      // $("body").css("background-color", "gray");
+    })
+
+
+    
+/*
+=============================
+ Dark Theme
+=============================
+ */
+/* darklight box */
 $(document).ready(function(){
-  // check to see if the window is top if not display button
-  $(window).scroll(function(){
-      if($(this).scrollTop() > 200){
-          $('.scrollToTop').fadeIn();
-          $('.scrollToTop').addClass('visible');
-      } else {
-          $('.scrollToTop').fadeOut();
-          $('.scrollToTop').removeClass('visible');
-      }
-  });
-  //smooth scrolling to top, click event to scroll to top
-      $('.scrollToTop').click(function(){
-          $('html, body').animate({scrollTop: 0}, 1000)
-      })
-});
+  $('ul.darklight').click(function(){
+    $('ul.darklight').toggleClass('dl-active');
+    $('body').toggleClass('dl-dark');
 
 
-/* ======================
-    remove Isotope's layout
-   ======================
-*/
-Isotope.Item.prototype._create = function() {
-    // assign id, used for original-order sorting
-    this.id = this.layout.itemGUID++;
-    // transition objects
-    this._transn = {
-      ingProperties: {},
-      clean: {},
-      onEnd: {}
-    };
-    this.sortData = {};
-  };
-  
-  Isotope.Item.prototype.layoutPosition = function() {
-    this.emitEvent( 'layout', [ this ] );
-  };
-  
-  Isotope.prototype.arrange = function( opts ) {
-    // set any options pass
-    this.option( opts );
-    this._getIsInstant();
-    // just filter
-    this.filteredItems = this._filter( this.items );
-    // flag for initalized
-    this._isLayoutInited = true;
-  };
-  
-  // layout mode that does not position items
-  Isotope.LayoutMode.create('none');
-  
-  
-  // --------------- //
-  
-  // init Isotope
-  var $grid = $('.grid').isotope({
-    itemSelector: '.element-item',
-    layoutMode: 'none'
-  });
-  // filter functions
-  var filterFns = {
-    // show if number is greater than 50
-    numberGreaterThan50: function() {
-      var number = $(this).find('.number').text();
-      return parseInt( number, 10 ) > 50;
-    },
-    // show if name ends with -ium
-    ium: function() {
-      var name = $(this).find('.name').text();
-      return name.match( /ium$/ );
-    }
-  };
-  // bind filter button click
-  $('#filters').on( 'click', 'button', function() {
-    var filterValue = $( this ).attr('data-filter');
-    // use filterFn if matches value
-    filterValue = filterFns[ filterValue ] || filterValue;
-    $grid.isotope({ filter: filterValue });
-  });
-  // change is-checked class on buttons
-  $('.button-group').each( function( i, buttonGroup ) {
-    var $buttonGroup = $( buttonGroup );
-    $buttonGroup.on( 'click', 'button', function() {
-      $buttonGroup.find('.is-checked').removeClass('is-checked');
-      $( this ).addClass('is-checked');
-    });
-  });
-  
+  })
+})
+
+/* darklight switch */
+$(document).ready(function(){
+  $('input.darklight-switch').click(function(){
+    $('body').toggleClass('dl-dark');
+  })
+})
+
+/*
+=============================
+ scroll indicator
+============================= */
+const landing = document.getElementById("landing");
+
+const landingOffset = landing.offsetTop;
+// landing.onscroll = function() {
+  window.onscroll = function() {
+  myFunction()
+};
+
+// When the user scrolls the page, execute myFunction 
+function myFunction() {
+  if (window.pageYOffset >= landingOffset){
+      
+    const scrollBody = document.body.scrollTop || document.documentElement.scrollTop;
+
+      var winScroll = scrollBody - landingOffset;
+
+      const scrollH = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+  var height =scrollH - landingOffset;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.height = scrolled + "%";
+  }
+
+}
