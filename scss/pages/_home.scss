@@ -47,11 +47,14 @@ font-size: 60px;
 line-height: 60px;
 }
 .bannerText h3.firstName {
-    color: #4672d1;
+    // color: #475e8a;
+    color: #8f2d20;
     display: block;
+    
 }
 .bannerText h3.lastName {
-    color: #335ba3;
+    // color: #335ba3;
+    color: #a31805;
     display: block;
 }
 .bannerText h3 span {
@@ -379,7 +382,8 @@ section.sec2 .skewed2, section.sec3 .skewed2 {
     top: 0;
     left: 0;
     border-width:  0 0 200px 100vw; /* top left bottom right */
-    border-color: transparent transparent transparent #FE2169;
+    // border-color: transparent transparent transparent #FE2169;
+    border-color: transparent transparent transparent #8f2d20;
     border-style: solid;
 }
 
@@ -389,7 +393,7 @@ section.sec2 .skewed2, section.sec3 .skewed2 {
     bottom: 0;
     right: 0;
     border-width:  200px 100vw 0 0 ; /* top left bottom right */
-    border-color: transparent #FE2169 transparent transparent;
+    border-color: transparent #8f2d20 transparent transparent;
     // border-color: transparent #000 transparent transparent;
     border-style: solid;
 }

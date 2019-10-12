@@ -4,7 +4,7 @@ $(document).ready(function(){
    ======================
 */
   $(".footernavcont").click(function() {
-    $(".fullnav").slideToggle(500);
+    $(".fullnav").slideToggle(1000);
     $(".projmenu").toggleClass('active')
     $(".projfolder").toggleClass('active')
     // $(".sidebar").toggleClass("active")
