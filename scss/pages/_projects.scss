@@ -65,6 +65,34 @@
     }
 }
 /*--------------------------------------------------------------
+ Projects - Parallax background
+--------------------------------------------------------------*/
+.body-projects {
+    background: #2DA3C7;
+    min-height: 200vh;
+}
+.parallaxCont {
+    position: relative;
+    width: 100%;
+    min-height: 600px;
+    height: 100vh;
+    overflow: hidden;
+    background: rgb(119, 113, 113);
+    /* background-color: #FEB01C; */
+    background-color: #2DA3C7;
+}
+.parallaxCont #parallax-scroll {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../firewatch-.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/*--------------------------------------------------------------
  Projects - Search Filter
 --------------------------------------------------------------*/
 .projects-heading {

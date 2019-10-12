@@ -1,6 +1,27 @@
 *, *:before, *:after {
    box-sizing: border-box;
 }
+
+//  Resets
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    margin: 0;
+}
+
+h1, h2, h3, p {
+    margin-top: 0;
+}
 /* Custom scroll */
            /* width */
            ::-webkit-scrollbar {
