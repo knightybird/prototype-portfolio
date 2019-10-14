@@ -2,7 +2,8 @@
 
 (function() {
 	// https://cors-anywhere.herokuapp.com/
-	var url = "http://api.openweathermap.org/data/2.5/weather?q=Vancouver,ca";
+	//"http://api.openweathermap.org/data/2.5/weather?q=Vancouver,ca"
+	var url = "https://cors-anywhere.herokuapp.com/api.openweathermap.org/data/2.5/weather?q=Vancouver,ca";
 	var apiKey = "1ae0956ac3df22d399ee5cacbd6dd6a2"; // Replace "APIKEY" with your own API key; otherwise, your HTTP request will not work
 	var httpRequest;
 	makeRequest(); //2/2 final step, call makeRequest function, then fire up http server
