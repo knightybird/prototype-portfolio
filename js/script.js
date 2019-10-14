@@ -47,6 +47,16 @@ $(document).ready(function(){
         $('.scrollToTop').click(function(){
           $('html, body').animate({scrollTop: 0}, 1000)
         })
+
+
+        // $('#pagepiling').pagepiling({
+        //     navigation: {
+        //         'textColor': '#fff',
+        //         'bulletsColor': '#fff',
+        //         'position': 'right',
+        //         'tooltips':['Norway','Switzerland','Australia','Italy']
+        //     }
+        // });
 });
 
 
@@ -92,7 +102,20 @@ function closeScreen() {
       trainingPlan.style.display = "none";
   }
 }
-    
+/*
+=============================
+ Circle Landing
+=============================
+ */
+// landing - hover
+$(document).on('mouseover', '.landing-container .column', function(){
+  $(this).addClass('active_landing').siblings().removeClass('active_landing');
+})
+
+$(document).on('mouseover', '.circle_container .circle', function(){
+  $(this).addClass('active_projects').siblings().removeClass('active_projects');
+})
+
 /*
 =============================
  Dark Theme

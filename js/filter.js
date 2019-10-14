@@ -1,3 +1,6 @@
+ /*	==========================================
+        Filter 
+    ========================================== */
 $(document).ready(function(){
     $(".button").click(function(){
         var value = $(this).attr("data-filter");

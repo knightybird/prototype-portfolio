@@ -9,7 +9,115 @@
     padding: 0;
     color: #262626;
     text-transform: uppercase;
-    font-size: 36px;
+    font-size: 30px;
+}
+.bannerText-about {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    max-width: 700px;
+}
+.bannerText-about h2 {
+    font-size: 3em;
+}
+.bannerText-about h3 {
+    font-size: 2em;
+}
+/*--------------------------------------------------------------
+ about styles
+--------------------------------------------------------------*/
+.aboutCont {
+    padding: 30px;
+    margin-bottom: 100px;
+}
+
+.aboutCont>h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.aboutCont article h1 {
+    text-align: center;
+}
+
+.svgContAbout {
+    position: relative;
+    height: 100%;
+    // bottom: 0;
+}
+svg.bannerSvg {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    transform: translateY(-30%);
+    opacity: 1;
+    visibility: visible;
+    transition: .5s;
+}
+.profilecont:hover svg.bannerSvg{
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0%) translateY(-30%);
+    }
+svg .draw {
+    position: relative;
+    stroke: #000;
+    stroke-width: 4px;
+    fill: transparent;
+}
+svg .draw.spin {
+    cursor: pointer;
+    // transform: translate(50%, 40%);
+    fill: #cf4040;
+    animation: spin 1s linear forwards;
+}
+svg .draw.draw1 {
+    stroke-dasharray: 1800;
+    stroke-dashoffset: 1800;
+    animation-delay: 3s;
+    animation: animateSVG 5s linear forwards;
+}
+svg .draw.draw2 {
+    stroke-dasharray: 1800;
+    stroke-dashoffset: 1800;
+    animation-delay: 3s;
+    animation: animateSVG 5s linear forwards;
+}
+@keyframes spin {
+    0% {
+        // position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(50%, 40%) rotate(0deg);
+
+    }
+    100% {
+        // position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(0%, 0%) rotate(359deg);
+    }
+}
+@keyframes animateSVG {
+    to {
+        stroke-dashoffset: 0 ;
+    }
+}
+text {
+    /* position: relative; */
+    /* left: 50%; */
+    width: 100%;
+    /* transform: translateX(25%); */
+    /* text-align: center; */
+    /* display: inline-block; */
+    font-size: 46px;
+    fill: #000;
+    font-family: 'Gothic A1', sans-serif;
+    font-weight: 700;
+    text-anchor: middle;
+    alignment-baseline: middle;
 }
 // .container {
 //     width: 100%;
@@ -21,23 +129,24 @@
 // }
 .container {
     position:relative;
-	width:90%;
+	// width:90%;
 	max-width:1280px;
 	padding:0 10px 0 10px;
 	margin:0 auto;
-	overflow:hidden;
-	height:inherit;   
+	// overflow:hidden;
+    height:auto;   
+    // min-height: 100vh;
 }
 .container .left-about {
     float: left;
     width: 50%;
-    height: 400px;
+    // height: 400px;
     position: relative;
 }
 .container .right-about {
-    float: right;
+    display: flex;
     width: 50%;
-    height: 400px;
+    // height: 400px;
 }
 /* .formBox {
     width: 100%;
@@ -83,7 +192,10 @@
     font-size: 12px;
     font-weight: bold;
 } */
-
+.profileBx {
+    position: relative;
+    margin: 0 auto;
+}
 .profilecont {
     width: calc(300px/1.5);
     height: calc(300px/1.5);
@@ -123,6 +235,7 @@
     animation-delay: .3s;
     z-index: -1;
 }
+
 .profilecont:hover:before {
     left: -34px;
     opacity: 1;
@@ -170,3 +283,55 @@
     background-position: center;
 }
 
+section.sec1.about {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 500px;
+}
+
+section.sec1.about, .top-banner-about{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 500px;
+}
+section.sec2.about {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 900px) {
+    /* banner */
+    .top-banner {
+        padding: 10vw 0 !important;
+    }
+    .top-banner h2 {
+        font-size: 7vw !important;
+    }
+    .top-banner p {
+        font-size: 3.5vw !important;
+    }
+    .mid-banner h2 {
+        font-size: 7vw;
+    }
+    .bottom-banner {
+        padding: 30px;
+    }
+}
+@media screen and (max-width: 560px) {
+    /* Make Grid Columns 
+	   Single Columns on Mobile */
+    .one-half,
+    .one-third {
+        width: 100% !important;
+    }
+}
+// @media screen and (min-width: 560px) {
+//     svg.bannerSvg {
+//         display: none;
+//     }
+// }

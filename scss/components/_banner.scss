@@ -37,7 +37,6 @@
     line-height: 1.2;
 }
 
-
 /* mid banner styles */
 
 .mid-banner {
@@ -80,3 +79,25 @@
     text-transform: uppercase;
     margin: 0 auto;
 }
+
+/*--------------------------------------------------------------
+ Grid Styles
+--------------------------------------------------------------*/
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+/* Grid Column Widths */
+
+.one-half {
+    width: 48%;
+}
+
+.one-third {
+    width: 30.6666666667%;
+}
+

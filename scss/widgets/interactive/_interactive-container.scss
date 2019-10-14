@@ -6,24 +6,8 @@
     flex-direction: row;
     width: 100vw;
     height: 90vh;
-    // min-height: 600px;
-    // max-height: 1000px;
     overflow: hidden;
-
-}
-.landing-head {
-    color: white;
-    // position: absolute;
-    left: 0;
-    padding: 20px 0 20px 20px;
-    width: 40vw;
-    height: 100vh;
-    font-size: 1em;
-    // min-height: 600px;
-    // max-height: 1000px;
-    // min-width: 224px;
-    // overflow: hidden;
-    // background-color: rgba(0,0,0,0.5);
+    transform: scale(.9, .8);
 }
 .landing-head ul {
     list-style: none;
@@ -32,7 +16,6 @@
 }
 
 .landing-head:hover {
-    // background-color: rgba(0,0,0,0.7);
     background:transparent;
 }
 
@@ -40,13 +23,10 @@
     width: 100vw;
     display: flex;
     justify-content: end;
-    height: 100vh;
-    overflow: hidden;
+    height: 90vh;
     border-right: 2px solid rgba(0,0,0,.5);
     border-left: 2px solid rgba(0,0,0,.5);
-
     overflow: hidden;
-
 }
 
 .landing-container .column:last-child {
@@ -55,9 +35,6 @@
 
 .landing-container .column .content {
     position: relative;
-    // height: 100vh;
-    // max-width: 200px;
-    // max-height:262px;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -71,7 +48,6 @@
     background: rgba(255,255,255,1);
     text-align: center;
     transition: 0.5s;
-    // min-height: 262px;
     min-height: 150px;
     width:200px;
     top:-10vh;
@@ -79,7 +55,6 @@
 
 .landing-container .column.active .content .box {
     opacity: 1;
-    // transform: translateY(50vh);
     transition: 0.7s;
     top:-10vh;   
     transition-property: transform, top;
@@ -129,30 +104,7 @@
     height: 100vh;
     pointer-events: none;
     z-index: -1;
-    background: url("../../../images/switzerland.jpeg");
-    background-repeat: no-repeat;
-}
-
-
-.landing-container .column .bg1 {
-    background: url("../images/switzerland.jpeg");
-    background-size: cover;
-    // background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: 0.5s;
-    height: 100vh;
-
-    //  display: none;
-}
-
-.landing-container .column.active .bg1 {
-    background: url("../images/switzerland.jpeg");
-    background-size: cover;
-    // background-attachment: fixed;
-    background-position: center;
-    transition: 0.5s;
-    display: block;
+    background-image: url("../../../images/bench-hollowknight.jpg");
 }
 .landing-container .column.active:hover .bg1,
 .landing-container .column.active:hover .bg2,
@@ -163,7 +115,7 @@
 
 
 .landing-container .column .bg2 {
-    background: url("../images/vancouver-medium.jpg");
+    // background: url("../images/vancouver-medium.jpg");
     background-size: cover;
     // background-attachment: fixed;
     background-position: center;
@@ -174,7 +126,7 @@
 }
 
 .landing-container .column.active .bg2 {
-    background: url("../images/vancouver-medium.jpg");
+    background: url("../../../images/bench-hollowknight.jpg");
     background-size: cover;
     // background-attachment: fixed;
     background-position: center;
@@ -183,7 +135,7 @@
 }
 
 .landing-container .column .bg3 {
-    background: url("../../../firewatch-.jpg");
+    // background: url("../../../firewatch-.jpg");
     background-size: cover;
     // background-attachment: fixed;
     background-position: center right;
@@ -203,7 +155,7 @@
 }
 
 .landing-container .column .bg4 {
-    background: url("../firewatch-desktoppng.jpg");
+    // background: url("../firewatch-desktoppng.jpg");
     background-size: cover;
     // background-attachment: fixed;
     background-position: center right;
@@ -366,3 +318,130 @@
 
 // right
 // clip-path: polygon(100% 0, 50% 100%, 100% 100%);
+
+.box-head {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;  
+}
+.content .box {
+    position: relative;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    margin: 10px auto;
+
+     width: calc(400px - 30px);
+    height: calc(300px - 30px);
+    background: #000;
+}
+.content .box .icon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f00;
+    transition: 0.5s;
+    z-index: 1;
+    text-align: center;
+}
+.content .box:hover .icon {
+    top: 20px;
+    left: calc(50% - 40px);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    transition: .5s ease-in-out;
+
+}
+.content .box .fa{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    transition: 0.5s;
+    color: #fff;
+}
+.content .box:hover .icon .fa {
+    font-size: 40px;
+}
+.content .box svg{
+    position: relative;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    width: 80px;
+    height: 80px;
+    transition: 0.5s;
+    color: #fff;
+}
+.content .box:hover .icon svg {
+    width: 40px;
+    height: 40px;
+}
+.content .box img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    transition: 0.5s;
+    color: #fff;
+}
+.content .box:hover .icon img {
+    width: 40px;
+    height: 40px;
+}
+.content .box .content {
+    position: absolute;
+        top: 100%;
+    height: calc(100% - 100px);
+    display: block;
+
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: .5s;
+    opacity: 0;
+}
+.content .box:hover .content {
+    top: 100px;
+    opacity: 1;
+    display: block;
+}
+.content .box .content h3 {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 24px;
+}
+.content  .box .content p {
+    color: #fff;
+}
+.content .box:nth-child(1) .icon {
+    background: #319635;
+}
+.content .box:nth-child(1) {
+    background: #4caf50;
+}
+.content .box:nth-child(2) .icon {
+    background: #d03852;
+}
+.content .box:nth-child(2) {
+    background: #f54967;
+}
+.content .box:nth-child(3) .icon {
+    background: #23798e;
+}
+.content .box:nth-child(3) {
+    background: #23798e;
+}
+.content .box:nth-child(3) {
+    background: #328fa5;
+}
+.box-head {
+    background-color: #000;
+}
+// .content .box {background-color: #000 !important;}
+
